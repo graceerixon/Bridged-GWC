@@ -18,7 +18,7 @@ Meteor.startup(() => {
 	
 	Meteor.methods({
 		'insert teenInfo': function(firstName, lastName, phone, zip, age, school, answer) {
-			Strengths.insert({
+			teenData.insert({
 				userId: Meteor.userId(),
 				firstName: firstName,
 				lastName: lastName,
@@ -32,7 +32,7 @@ Meteor.startup(() => {
 	
 	Meteor.methods({
 		'insert seniorInfo': function(seniorFirst, seniorLast, entrance) {
-			Strengths.insert({
+			seniorData.insert({
 				userId: Meteor.userId(),
 				seniorFirst: seniorFirst,
 				seniorLast: seniorLast,

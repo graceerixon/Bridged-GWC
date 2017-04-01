@@ -6,21 +6,23 @@ import './main.html';
 
 
 Template.seniorForm.events({
-  'submit form2': function(event){
+  'submit form': function(event){
     event.preventDefault();
+	var email = ($('[name=email]').val());
+    var password = $('[name=password]').val();
 	var seniorFirst = $('[name=firstName]').val();
 	var seniorLast = $('[name=lastName]').val();
 	var entrance = $('[name=entrance]').val();
 	console.log(event);
     Accounts.createUser({
-	function(error){
-		Meteor.call('insert seniorInfo', firstName, lastName, entrance);
+		email: email,
+      password: password
+	}, function(error){
+		Meteor.call('insert seniorInfo', seniorFirst, seniorLast, entrance);
 		if(error){
 			console.log(error.reason);
 		} else {
 			FlowRouter.go('home');
 		}
-	}
-	})
-    }
-  });
+	});
+}});

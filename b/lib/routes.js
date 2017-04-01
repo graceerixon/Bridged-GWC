@@ -22,3 +22,10 @@ FlowRouter.route('/teen', {
     BlazeLayout.render("content", {content: "teenForm"});
   }
 });
+
+FlowRouter.route('/senior', {
+  name: "seniorForm",
+  action: function() {
+    BlazeLayout.render("content", {content: "seniorForm"});
+  }
+});

@@ -22,7 +22,6 @@ Template.teenForm.events({
       email: email,
       password: password
     }, function(error){
-		strengths = [first, second, third, fourth, fifth];
 		Meteor.call('insert teenInfo', firstName, lastName, phone, zip, age, school, answer);
 		if(error){
 			console.log(error.reason);
