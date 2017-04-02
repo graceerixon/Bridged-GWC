@@ -2,6 +2,7 @@ import { Meteor } from 'meteor/meteor';
 
 export const seniorData = new Mongo.Collection('seniorData');
 export const teenData = new Mongo.Collection('teenData');
+export const contactUs = new Mongo.Collection('contactUs');
 
 Meteor.startup(() => {
   if (Meteor.isServer) {
@@ -16,12 +17,20 @@ Meteor.startup(() => {
 	});
 	}
 	
+	if (Meteor.isServer) {
+	Meteor.publish('contactUs', function publication() {
+		return contactUs.find();
+	});
+	}
+	
 	Meteor.methods({
-		'insert teenInfo': function(firstName, lastName, phone, zip, age, school, answer) {
+		'insert teenInfo': function(email, firstName, lastName, interests, phone, zip, age, school, answer) {
 			teenData.insert({
 				userId: Meteor.userId(),
+				email: email,
 				firstName: firstName,
 				lastName: lastName,
+				interests: interests,
 				phone: phone,
 				age: age,
 				school: school,
@@ -31,12 +40,24 @@ Meteor.startup(() => {
 	});
 	
 	Meteor.methods({
-		'insert seniorInfo': function(seniorFirst, seniorLast, entrance) {
+		'insert seniorInfo': function(email, seniorFirst, seniorLast, seniorInterests, place, entrance) {
 			seniorData.insert({
 				userId: Meteor.userId(),
 				seniorFirst: seniorFirst,
 				seniorLast: seniorLast,
+				seniorInterests: seniorInterests,
+				place: place,
 				entrance: entrance
+			});
+		}
+	});
+	
+	Meteor.methods({
+		'insert contactUs': function(name, message) {
+			contactUs.insert({
+				userId: Meteor.userId(),
+				name: name,
+				message: message
 			});
 		}
 	});

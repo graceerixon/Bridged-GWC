@@ -2,17 +2,83 @@
 	<form class = "teenForm">
 		<h3> Teen </h3>
 		<p> Email: <input id = "email" type = "email" name = "email"></p>
-		<p> Password: <input id = "password" type = "password" name = "password"> </p>
 		
 		<p> First Name: <input id = "firstName" type = "firstName" name = "firstName"> </p>
 		<p> Last Name: <input id = "lastName" type = "lastName" name = "lastName"> </p>
 		<p> Phone Number: <input id = "phone" type = "phone" name = "phone"> </p>
 		
-		<p> How old are you? <input id = "age" type = "age" name = "age"> </p>
-		<p> Where do you go to school? <input id = "school" type = "school" name = "school"></p>
-		<p> Why do you want to volunteer with us? <input id = "answer" type = "answer" name = "answer"> </p>
+		<div class = "header">
+	  <h1> Click on the skills you'd like to learn.</h1><p>Roll your mouse over a skill to learn more about it</p>
+	</div>
+	<br/>
+
+	<div class = "boxes">
+	<div class="container">
+	  <img class = "box"
+	 src="https://files.slack.com/files-tmb/T2ENBKC49-F3X5ST9L1-478d975b91/bring_it_on_icons_raster-01_1024.png" onclick="selectMeOne()" />
+	 <input id="firstBox" name="firstBox" type="checkbox" value="first" class = "hidden"> 
+	   <div class="overlay" onclick="selectMeOne()">
+		<div class="text"><p>Communication</p></div>
+	</div>
+	  </div>
+	  
+	 
+	<div class="container">
+	  <img class="box2" src ="https://files.slack.com/files-tmb/T2ENBKC49-F3XUBRL2H-189eee501b/bring_it_on_icons_raster-02_1024.png" onclick="selectMeTwo()"/>
+	  <input id="secondBox" name="secondBox" type="checkbox" value="second" class = "hidden"/>
+	<div class="overlay" onclick="selectMeTwo()">
+	  <div class="text"><p>The Internet</p></div>
+	  </div>
+	</div>
+
+	  
+	  
+	<div class="container">  
+	  <img class="box3" src ="https://files.slack.com/files-tmb/T2ENBKC49-F3YGBK64E-f6cecbc886/bring_it_on_icons_raster-03_1024.png" onclick="selectMeThree()"/>
+	  <input id="thirdBox" name="thirdBox" type="checkbox" value="third" class = "hidden"/>
+	<div class="overlay" onclick="selectMeThree()">
+		<div class="text"><p>Mobile Devices</p></div>
+	  </div>
+	</div>
+	<br>
+	  
+	 <div class="container">
+	  <img class="box4" src="https://files.slack.com/files-tmb/T2ENBKC49-F3XPRNN7M-8928117b84/bring_it_on_icons_raster-04_1024.png" onclick="selectMeFour()" />
+	  <input id="fourBox" name="fourBox" type="checkbox" value="fourth" class = "hidden"/>
+	<div class="overlay" onclick="selectMeFour()">
+		<div class="text"><p>Social Media</p></div>
+	  </div>
+	</div>
 		
-		<p class = "registerButton"> <input type = "submit" value = "Register"> </p>
+		
+	 <div class="container">
+	  <img class="box5" src="https://files.slack.com/files-tmb/T2ENBKC49-F3XPRNTK5-3ce8095dbf/bring_it_on_icons_raster-05_1024.png" onclick="selectMeFive()" />
+	  <input id="fiveBox" name="fiveBox" type="checkbox" value="fifth" class = "hidden"/>
+	  <div class="overlay"  onclick="selectMeFive()">
+		<div class="text"><p>Computers</p></div>
+	  </div>
+	</div>
+		  
+		  
+	<div class="container">      
+	  <img class="box6" src="https://files.slack.com/files-tmb/T2ENBKC49-F3XPRPAUT-1e0973148f/bring_it_on_icons_raster-06_1024.png" onclick="selectMeSix()" />
+	  <input id="sixBox" name="sixBox" type="checkbox" value="sixth" class = "hidden"/>
+	<div class="overlay" onclick="selectMeSix()">
+		<div class="text"><p>Word Processing</p></div>
+	  </div>
+	</div>
+	</div>
+
+	<p>
+	Skills you have selected: <div id="display">
+	</div>
+	</p>
+
+	<p> How old are you? <input id = "age" type = "age" name = "age"> </p>
+	<p> Where do you go to school? <input id = "school" type = "school" name = "school"></p>
+	<p> Why do you want to volunteer with us? <input id = "answer" type = "answer" name = "answer"> </p>
+		
+	<p class = "registerButton"> <input type = "submit" value = "Register"> </p>
 		
 	</form>
 </template>
