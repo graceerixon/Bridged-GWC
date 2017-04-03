@@ -7,6 +7,9 @@ ul.topnav {
     overflow: hidden;
     background-color: #B7E1E5;
     opacity:.89;
+	position: fixed;
+	width: 100%;
+	z-index: 1;
  }
 
 /* Float the list items side by side */

@@ -1,0 +1,138 @@
+.topHome {
+  background: url("https://preview.ibb.co/k0q4Dv/Screen_Shot_2017_03_25_at_4_23_41_PM.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+   background-size: cover;
+   padding-bottom: 700px;
+  min-height: 100px;
+}
+
+
+.bridgeGap {
+  background-color: lightblue;
+
+  margin: 0 10% 0 25%;
+  
+  position: absolute;
+  left: 0%;
+  top: 40%;
+  text-align: center;
+  opacity: .8;
+}
+
+.learnmore {
+  background-color: lightblue;
+  margin: 0 10% 0 25%;
+  position: absolute;
+  left: 25%;
+  top: 80%;
+  text-align: center;
+  opacity: .8
+
+  
+}
+
+
+@media only screen and (max-width: 2000px) {
+    .bridgeGap { left: 5%; }
+  .learnmore{left:35%;}
+}
+@media only screen and (max-width: 1500px) {
+    .bridgeGap { left: 0%; }
+}
+.learnmore{left:30%;
+  }
+@media only screen and (max-width: 1200px) {
+    .bridgeGap { left: -5%; }
+}
+    .learnmore{left:25%;
+  }
+@media only screen and (max-width: 900px) {
+    .bridgeGap { left: -10%; }
+  .learnmore{left:21%;
+  }
+}
+@media only screen and (max-width: 900px) {
+    .bridgeGap { left: -13%; }
+}
+ .learnmore{left:21%;
+  }
+@media only screen and (max-width: 750px) {
+    .bridgeGap { left: -15%;}
+    .learnmore{left:20%;
+  }
+  
+}
+@media only screen and (max-width: 500px) {
+   .bridgeGap { 
+      left: -15%;
+      opacity: 1;
+  }
+  .topHome {
+      background:yellow; 
+}
+  .learnmore{left:18%;
+  opacity: 1;
+}
+}
+
+
+
+.secondHome {
+  background: lightblue fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding-bottom: 500px;
+  display: block;
+  bottom: -500px;
+  
+}
+.aboutHome{
+  font-size: large;
+  background: yellow;
+  
+  
+}
+.boxes{
+  width: 200px;
+  height: 200px;
+  border: 1px yellow solid;
+  display: inline-block;
+  background-color: yellow;
+}
+
+.getStarted{
+  background: light blue;
+  padding-top: 100px;
+}
+.btn {
+	background-color:#163569;
+	-moz-border-radius:9px;
+	-webkit-border-radius:9px;
+	border-radius:9px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Courier New;
+	font-size:17px;
+	padding:14px 19px;
+	text-decoration:none;
+}
+.btn:hover {
+	background-color:#e9f013;
+}
+.btn:active {
+	position:relative;
+	top:1px;
+}
+#homeboxes {
+	width: 90%;
+	padding-top: 0px;
+	padding-bottom: 10px;
+}
+#BridgedDescription {
+	padding-top: 40px;
+}

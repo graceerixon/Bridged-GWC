@@ -1,4 +1,4 @@
-function selectMeOne() {
+export function selectMeOne() {
   document.getElementById("firstBox").checked = !document.getElementById("firstBox").checked;
   
   var e = document.getElementById("firstBox");
@@ -10,7 +10,7 @@ function selectMeOne() {
   }
 }
 
-function selectMeTwo() {
+export function selectMeTwo() {
   document.getElementById("secondBox").checked = !document.getElementById("secondBox").checked;
   
   var e = document.getElementById("secondBox");
@@ -21,7 +21,7 @@ function selectMeTwo() {
   }
 }
 
-function selectMeThree() {
+export function selectMeThree() {
   document.getElementById("thirdBox").checked = !document.getElementById("thirdBox").checked;
   
   var e = document.getElementById("thirdBox");
@@ -32,7 +32,7 @@ function selectMeThree() {
   }
 }
 
-function selectMeFour() {
+export function selectMeFour() {
   document.getElementById("fourBox").checked = !document.getElementById("fourBox").checked;
   
   var e = document.getElementById("fourBox");
@@ -43,7 +43,7 @@ function selectMeFour() {
   }
 }
 
-function selectMeFive() {
+export function selectMeFive() {
   document.getElementById("fiveBox").checked = !document.getElementById("fiveBox").checked;
   
   var e = document.getElementById("fiveBox");
@@ -54,7 +54,7 @@ function selectMeFive() {
   }
 }
 
-function selectMeSix() {
+export function selectMeSix() {
   document.getElementById("sixBox").checked = !document.getElementById("sixBox").checked;
   
   var e = document.getElementById("sixBox");
