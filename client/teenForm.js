@@ -7,10 +7,10 @@ import './main.html';
 
 
 Template.teenForm.events({
+
   'submit form': function(event){
     event.preventDefault();
 	var email = ($('[name=email]').val());
-    var password = $('[name=password]').val();
 	var firstName = $('[name=firstName]').val();
 	var lastName = $('[name=lastName]').val();
 	

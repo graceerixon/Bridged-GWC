@@ -3,6 +3,7 @@ import { Meteor } from 'meteor/meteor';
 export const seniorData = new Mongo.Collection('seniorData');
 export const teenData = new Mongo.Collection('teenData');
 export const contactUs = new Mongo.Collection('contactUs');
+export const admin = new Mongo.Collection('admin');
 
 Meteor.startup(() => {
   if (Meteor.isServer) {
@@ -58,6 +59,16 @@ Meteor.startup(() => {
 				userId: Meteor.userId(),
 				name: name,
 				message: message
+			});
+		}
+	});
+	
+	Meteor.methods({
+		'insert admin': function(email, password) {
+			admin.insert({
+				userId: Meteor.userId(),
+				email: email,
+				password: password
 			});
 		}
 	});

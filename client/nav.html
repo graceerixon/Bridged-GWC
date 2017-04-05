@@ -3,12 +3,19 @@
 		<li><a href="{{pathFor route = 'home'}}">
 		<span class="glyphicon glyphicon-home"></span>
 		</a></li>
-	  <li><a href="{{pathFor route = 'about'}}"><span class="glyphicon glyphicon-info-sign"></span>About</a></li>
-	  <li><a href="{{pathFor route = 'senior'}}"><span class="glyphicon glyphicon-info-sign"></span>Senior</a></li>
-	  <li><a href="{{pathFor route = 'teen'}}"><span class="glyphicon glyphicon-info-sign"></span>Teen</a></li>
+	  <li><a href="{{pathFor route = 'contact'}}">Contact</a></li>
+	  <li><a href="{{pathFor route = 'about'}}">About</a></li>
+	  {{#if currentUser}}
+	  <li><a href="#" class = "logout" style="-webkit-border-radius: 99px;-moz-border-radius: 99px;order-radius: 99px;">Logout</a></li>
+	  <li><a href="{{pathFor route = 'info'}}">Results</a></li>
+	  {{else}}
+	  <li><a href="{{pathFor route = 'senior'}}">Senior</a></li>
+	  <li><a href="{{pathFor route = 'teen'}}">Teen</a></li>
+	  {{/if}}
 	  <li class="icon">
 		<a href="javascript:void(0);">&#9776;</a>
 	  </li>
 	<img src="http://imagizer.imageshack.us/v2/320x240q90/921/s6RIfC.png"  id="mainlogo" class="img-responsive" alt="Bridged" width="105" height="55">
 	</ul>
+
 </template>
