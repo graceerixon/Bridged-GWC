@@ -14,6 +14,8 @@ export function assignment(teens, seniors, amount) {
 	var groups = [];
 	var num = seniors.length;
 	
+	
+	
 	// do I have a functional array of the seniors and teens?
 	
 	//run through loop for the number of seniors to calculate their score with each teen

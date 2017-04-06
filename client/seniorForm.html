@@ -1,70 +1,80 @@
 <template name = "seniorForm">
 	<form class = "seniorForm">
-		<h3> Senior </h3>
+		<h3 class = "signIn"> Seniors sign up here </h3>
 		
-		<p> Email: <input id = "email" type = "email" name = "email"></p>
-		
-		<p> First Name: <input id = "firstName" type = "firstName" name = "firstName"> </p>
-		<p> Last Name: <input id = "lastName" type = "lastName" name = "lastName"> </p>
-		
+		<div class = "row">
+		<div class = "col-md-6 col-sm-12">
+			<p> <div class = "fields"> FIRST NAME </div><input id = "seniorFirst" type = "seniorFirst" name = "seniorFirst"> </p>
+		</div>
+		<div class = "col-md-6 col-sm-12">
+			<p> <div class = "fields"> LAST NAME </div><input id = "seniorLast" type = "seniorLast" name = "seniorLast"> </p>
+		</div>
+		</div>
+		<div class = "row">
+		<div class = "col-md-6 col-sm-12">
+			<p> <div class = "fields"> PHONE NUMBER </div><input id = "phone" type = "phone" name = "phone"> </p>
+		</div>
+		<div class = "col-md-6 col-sm-12">
+			<p> <div class = "fields"> EMAIL </div><input id = "email" type = "email" name = "email"></p>
+		</div> </div>
 		
 	<div class = "header">
-	  <h1> Click on the skills you'd like to learn.</h1><p>Roll your mouse over a skill to learn more about it</p>
+	  <h1 class = "learning"> What would you like to learn? </h1><p class = "learnPara">Roll your mouse over a skill to learn more about it and click on the box to add it to your list!</p>
 	</div>
 	<br/>
 
 	<div class = "boxes">
-	<div class="container">
+	<div class="boxContainer">
 	  <img class = "box"
-	 src="https://files.slack.com/files-tmb/T2ENBKC49-F3X5ST9L1-478d975b91/bring_it_on_icons_raster-01_1024.png" onclick="selectMeOne()" />
-	 <input id="first" name="first" type="checkbox" value="first" class = "hidden"> 
-	   <div class="overlay" onclick="selectMeOne()">
+	 src="https://files.slack.com/files-tmb/T2ENBKC49-F3X5ST9L1-478d975b91/bring_it_on_icons_raster-01_1024.png" />
+	 <input id="firstBox" name="seniorInterests" type="checkbox" value="communication" class = "hidden"> 
+	   <div id = "firstBox" class="overlay">
 		<div class="text"><p>Communication</p></div>
 	</div>
 	  </div>
 	  
 	 
-	<div class="container">
-	  <img class="box2" src ="https://files.slack.com/files-tmb/T2ENBKC49-F3XUBRL2H-189eee501b/bring_it_on_icons_raster-02_1024.png" onclick="selectMeTwo()"/>
-	  <input id="second" name="second" type="checkbox" value="second" class = "hidden"/>
-	<div class="overlay" onclick="selectMeTwo()">
+	<div class="boxContainer">
+	  <img class="box2" src ="https://files.slack.com/files-tmb/T2ENBKC49-F3XUBRL2H-189eee501b/bring_it_on_icons_raster-02_1024.png" />
+	  <input id="secondBox" name="seniorInterests" type="checkbox" value="internet" class = "hidden"/>
+	<div id = "secondBox" class="overlay">
 	  <div class="text"><p>The Internet</p></div>
 	  </div>
 	</div>
 
 	  
 	  
-	<div class="container">  
-	  <img class="box3" src ="https://files.slack.com/files-tmb/T2ENBKC49-F3YGBK64E-f6cecbc886/bring_it_on_icons_raster-03_1024.png" onclick="selectMeThree()"/>
-	  <input id="third" name="third" type="checkbox" value="third" class = "hidden"/>
-	<div class="overlay" onclick="selectMeThree()">
+	<div class="boxContainer">  
+	  <img class="box3" src ="https://files.slack.com/files-tmb/T2ENBKC49-F3YGBK64E-f6cecbc886/bring_it_on_icons_raster-03_1024.png"/>
+	  <input id="thirdBox" name="seniorInterests" type="checkbox" value="mobile" class = "hidden"/>
+	<div id = "thirdBox" class="overlay">
 		<div class="text"><p>Mobile Devices</p></div>
 	  </div>
 	</div>
 	<br>
 	  
-	 <div class="container">
-	  <img class="box4" src="https://files.slack.com/files-tmb/T2ENBKC49-F3XPRNN7M-8928117b84/bring_it_on_icons_raster-04_1024.png" onclick="selectMeFour()" />
-	  <input id="four" name="four" type="checkbox" value="fourth" class = "hidden"/>
-	<div class="overlay" onclick="selectMeFour()">
+	 <div class="boxContainer">
+	  <img class="box4" src="https://files.slack.com/files-tmb/T2ENBKC49-F3XPRNN7M-8928117b84/bring_it_on_icons_raster-04_1024.png"/>
+	  <input id="fourBox" name="seniorInterests" type="checkbox" value="social" class = "hidden"/>
+	<div id = "fourBox" class="overlay">
 		<div class="text"><p>Social Media</p></div>
 	  </div>
 	</div>
 		
 		
-	 <div class="container">
-	  <img class="box5" src="https://files.slack.com/files-tmb/T2ENBKC49-F3XPRNTK5-3ce8095dbf/bring_it_on_icons_raster-05_1024.png" onclick="selectMeFive()" />
-	  <input id="five" name="five" type="checkbox" value="fifth" class = "hidden"/>
-	  <div class="overlay"  onclick="selectMeFive()">
+	 <div class="boxContainer">
+	  <img class="box5" src="https://files.slack.com/files-tmb/T2ENBKC49-F3XPRNTK5-3ce8095dbf/bring_it_on_icons_raster-05_1024.png" />
+	  <input id="fiveBox" name="seniorInterests" type="checkbox" value="computers" class = "hidden"/>
+	  <div id = "fiveBox" class="overlay">
 		<div class="text"><p>Computers</p></div>
 	  </div>
 	</div>
 		  
 		  
-	<div class="container">      
-	  <img class="box6" src="https://files.slack.com/files-tmb/T2ENBKC49-F3XPRPAUT-1e0973148f/bring_it_on_icons_raster-06_1024.png" onclick="selectMeSix()" />
-	  <input id="six" name="six" type="checkbox" value="sixth" class = "hidden"/>
-	<div class="overlay" onclick="selectMeSix()">
+	<div class="boxContainer">      
+	  <img class="box6" src="https://files.slack.com/files-tmb/T2ENBKC49-F3XPRPAUT-1e0973148f/bring_it_on_icons_raster-06_1024.png" />
+	  <input id="sixBox" name="seniorInterests" type="checkbox" value="word" class = "hidden"/>
+	<div id = "sixBox" class="overlay">
 		<div class="text"><p>Word Processing</p></div>
 	  </div>
 	</div>
@@ -75,10 +85,10 @@
 	</div>
 	</p>
 	
-		<p> Name of Residence: <input id = "place" type = "place" name = "place"> </p>
-		<p> Entrance Number: <input id = "entrance" type = "entrance" name = "entrance"> </p>
+	<p> <div class = "fields"> NAME OF RESIDENCE </div> <input id = "place" type = "place" name = "place"> </p>
+	<p> <div class = "fields"> ENTRANCE NUMBER </div> <input id = "entrance" type = "entrance" name = "entrance"> </p>
 		
-		<p class = "registerButton"> <input type = "submit" value = "Register"> </p>
+	<p class = "registerButton"> <input id = "registerButton" type = "submit" value = "REGISTER"> </p>
 		
 	</form>
 </template>

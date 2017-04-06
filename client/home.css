@@ -151,16 +151,19 @@ opacity: 1;
   text-decoration: none;
 }
 
-
+.display {
+	color: #F7EC18;
+}
 
 
 .boxes{
-  width: 200px;
-  height: 200px;
   border: 1px yellow solid;
   display: inline-block;
   background-color: #F7EC18;
   font-family: 'Oswald', sans-serif;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 2%;
 }
 
 #BridgedDescription {
@@ -172,22 +175,24 @@ opacity: 1;
 }
 
 .start1 {
-	text-align: right;
+	text-align: center;
 	padding-top: 140px;
   padding-bottom: 140px;
+  padding-left: 10%;
 }
 
 .start2 {
-	text-align: left;
+	text-align: center;
 	padding-top: 140px;
   padding-bottom: 140px;
+  padding-right: 10%;
 }
 
 .btn {
   -webkit-border-radius: 23;
   -moz-border-radius: 23;
   border-radius: 23px;
-  font-family: Arial;
+  font-family: Raleway;
   color: #ffffff;
   font-size: 35px;
   background: #3E8076;
@@ -232,10 +237,12 @@ opacity: 1;
 		text-align: center;
 		padding-top: 100px;
 		padding-bottom: 75px;
+		padding-left: 0;
 	}
 	.start2 {
 		text-align: center;
 		padding-top: 0;
 		padding-bottom: 100px;
+		padding-right: 0;
 	}
 }
