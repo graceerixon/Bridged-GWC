@@ -13,14 +13,19 @@ Template.teenForm.events({
 	var firstName = $('[name=firstName]').val();
 	var lastName = $('[name=lastName]').val();
 	
-	var firstBox = ($('[name=firstBox]').val());
-	var secondBox = ($('[name=secondBox]').val());
-	var thirdBox = ($('[name=thirdBox]').val());
-	var fourBox = ($('[name=fourBox]').val());
-	var fiveBox = ($('[name=fiveBox]').val());
-	var sixBox = ($('[name=sixBox]').val());
-	interests = [firstBox, secondBox, thirdBox, fourBox, fiveBox, sixBox];
-  
+	//var firstBox = ($('[name=firstBox]').val());
+	//var secondBox = ($('[name=secondBox]').val());
+	//var thirdBox = ($('[name=thirdBox]').val());
+	//var fourBox = ($('[name=fourBox]').val());
+	//var fiveBox = ($('[name=fiveBox]').val());
+	//var sixBox = ($('[name=sixBox]').val());
+	interests = [];
+	list = ($('[name=interests]:checked'));
+	for (var i = 0; i < list.length; i++) {
+		interests.push(list[i].value);
+	}
+	
+	
 	var phone = $('[name=phone]').val();
 	var zip = $('[name=zip]').val();
 	var age = $('[name=age]').val();

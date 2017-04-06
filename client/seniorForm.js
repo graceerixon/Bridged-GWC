@@ -10,15 +10,20 @@ Template.seniorForm.events({
     event.preventDefault();
 	var email = ($('[name=email]').val());
 	var seniorFirst = $('[name=seniorFirst]').val();
-	var seniorLast = $('[name=seniorFirst]').val();
+	var seniorLast = $('[name=seniorLast]').val();
 	
-	var first = ($('[name=first]').val());
-	var second = ($('[name=second]').val());
-	var third = ($('[name=third]').val());
-	var four = ($('[name=four]').val());
-	var five = ($('[name=five]').val());
-	var six = ($('[name=six]').val());
-	seniorInterests = [first, second, third, four, five, six];
+	//var first = ($('[name=first]').val());
+	//var second = ($('[name=second]').val());
+	//var third = ($('[name=third]').val());
+	//var four = ($('[name=four]').val());
+	//var five = ($('[name=five]').val());
+	//var six = ($('[name=six]').val());
+	seniorInterests = [];
+	list2 = ($('[name=seniorInterests]:checked'));
+	for (var i = 0; i < list2.length; i++) {
+		seniorInterests.push(list2[i].value);
+	}
+	
 	
 	
 	var place = $('[name=place]').val();
@@ -28,7 +33,7 @@ Template.seniorForm.events({
 	FlowRouter.go('home');
 	},
 	
-		'click #firstBox':function selectMeOne() {
+	'click #firstBox':function selectMeOne() {
 		document.getElementById("firstBox").checked = !document.getElementById("firstBox").checked;
 		var e = document.getElementById("firstBox");
 		if (e.checked) {
