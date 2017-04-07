@@ -1,11 +1,16 @@
 <template name = "info">
-<br> <br> <br> <br> <br> <br> <br> <br>
+	<div class = "info">
+	<h3 class = "signIn"> <center> Teen Submissions  </center> </h3>
 	{{#each groups}}
-		<br> <br>
+		<br>
+		<div class = "learnPara" style = "font-family: Raleway; color: #3E8076;">
 		<p>{{firstName}} {{lastName}}, {{age}}</p>
 		<p>{{interests}}</p>
 		<p>{{email}}, {{phone}}</p>
 		<p>{{school}}</p>
 		<p>{{answer}}</p>
+		<div class = "infoLine"> </div>
+		</div>
 	{{/each}}
+	</div>
 </template>

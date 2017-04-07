@@ -195,3 +195,14 @@ input {
 .aboutPage {
 	padding: 12% 5% 10% 5%;
 }
+
+.info {
+	padding: 14% 8% 10% 8%;
+	text-align: left;
+}
+
+.infoLine {
+	height: 2px;
+	width: 100%;
+background-color: #F7EC18;
+}
