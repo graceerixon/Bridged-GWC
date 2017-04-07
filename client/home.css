@@ -162,7 +162,7 @@
 	padding-top: 40px;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen or (max-width: 767px) {
 	.verticalLine{
 		width: 500px;
 		margin: auto;
@@ -184,48 +184,48 @@
 	}
 }
 
-@media only screen and (max-width: 2000px) {
+@media only screen or (max-width: 2000px) {
     .bridgeGap { left: 5%; }
 	.learnmore{left:35%;}
 	.aboutHome h3{font-size:40px }
 
 }
-@media only screen and (max-width: 1500px) {
+@media only screen or (max-width: 1500px) {
     .bridgeGap { left: 0%; }
 
 .learnmore{left:30%;
   }
   	.aboutHome h3{font-size:35px }
 }
-@media only screen and (max-width: 1200px) {
+@media only screen or (max-width: 1200px) {
     .bridgeGap { left: -5%; }
 
     .learnmore{left:25%;}
 	.aboutHome h3{font-size:35px }
 }
-@media only screen and (max-width: 1150px) {
+@media only screen or (max-width: 1150px) {
     .bridgeGap { left: -10%; }
 	.learnmore{left:21%;}
 	.aboutHome h3{font-size:30px }
 
 }
-@media only screen and (max-width: 900px) {
+@media only screen or (max-width: 900px) {
     .bridgeGap { left: -13%; }
 
  .learnmore{left:21%;
   }
   .aboutHome h3{font-size:25px }
 }
- @media only screen and (max-width: 800px) {
+ @media only screen or (max-width: 800px) {
 .aboutHome h3{font-size:23px }
  }
-@media only screen and (max-width: 767px) {
+@media only screen or (max-width: 767px) {
 	.aboutHome {padding-right:3%;}
 	.blueSpace {height: 0px;}
 	.btnAbout {margin-bottom: 0px;}
 	
 }
-@media only screen and (max-width: 750px) {
+@media only screen or (max-width: 750px) {
     .bridgeGap { left: -15%;}
     .learnmore{left:20%;}
 	.aboutHome h3{font-size:30px }
