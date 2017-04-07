@@ -1,14 +1,20 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
 import { FlowRouter } from 'meteor/kadira:flow-router';
+import { returnTeen } from './people.js';
+import { teenData } from '../lib/teenData.js';
 
-//Template.results.onCreated(function() {
-	//Meteor.subscribe("Strengths");
-//});
+import './main.html';
 
-//Template.results.helpers({
-	//groups: function() {
-		//var groups = Strengths.find().fetch();
-		//return assignGroups(groups, 7);
-	//}
-//});
+Template.info.onCreated(function() {
+	//this.state = new ReactiveDict();
+	Meteor.subscribe("teenData");
+});
+
+
+Template.info.helpers({
+	groups: function displayTeens() {
+		var ten = teenData.find().fetch();
+		return returnTeen(ten);
+	}
+});
