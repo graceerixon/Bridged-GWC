@@ -1,9 +1,9 @@
 import { Meteor } from 'meteor/meteor';
 
-export const seniorData = new Mongo.Collection('seniorData');
-export const teenData = new Mongo.Collection('teenData');
-export const contactUs = new Mongo.Collection('contactUs');
-export const admin = new Mongo.Collection('admin');
+import { teenData } from '../lib/teenData.js';
+//import { seniorData } from '../lib/seniorData.js';
+import { contactUs } from '../lib/contactUs.js';
+import { admin } from '../lib/admin.js';
 
 Meteor.startup(() => {
   if (Meteor.isServer) {
@@ -21,6 +21,12 @@ Meteor.startup(() => {
 	if (Meteor.isServer) {
 	Meteor.publish('contactUs', function publication() {
 		return contactUs.find();
+	});
+	}
+	
+	if (Meteor.isServer) {
+	Meteor.publish('admin', function publication() {
+		return admin.find();
 	});
 	}
 	

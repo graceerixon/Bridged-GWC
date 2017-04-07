@@ -1,3 +1,11 @@
 <template name = "info">
-		<p> Admin! </p>
+<br> <br> <br> <br> <br> <br> <br> <br>
+	{{#each groups}}
+		<br> <br>
+		<p>{{firstName}} {{lastName}}, {{age}}</p>
+		<p>{{interests}}</p>
+		<p>{{email}}, {{phone}}</p>
+		<p>{{school}}</p>
+		<p>{{answer}}</p>
+	{{/each}}
 </template>
