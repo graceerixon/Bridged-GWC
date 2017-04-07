@@ -232,7 +232,7 @@
 
   
 }
-@media only screen and (max-width: 500px) {
+@media only screen or (max-width: 500px) {
    .bridgeGap { 
       left: -15%;
       opacity: 1;
