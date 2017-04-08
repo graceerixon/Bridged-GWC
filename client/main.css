@@ -188,6 +188,12 @@ input {
 	padding: 12% 5% 10% 5%;
 }
 
+.blurbs {
+	background-color:#F7EC18;
+	padding: 5% 5% 10% 5%;
+	margin-top: -6%;
+}
+
 @media only screen and (max-width:680px) {
 	ul.topnav li:not(:first-child) {
 		display: none;
