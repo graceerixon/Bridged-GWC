@@ -1,4 +1,3 @@
-/* Remove margins and padding from the list, and add a black background color */
 ul.topnav {
     list-style-type: none;
     margin-top: 15px;
@@ -12,10 +11,10 @@ ul.topnav {
 	z-index: 1;
  }
 
-/* Float the list items side by side */
-ul.topnav li {float: right;}
+ul.topnav li {
+	float: right;
+}
 
-/* Style the links inside the list items */
 ul.topnav li a {
     display: inline-block;
     color: #187565;
@@ -24,41 +23,39 @@ ul.topnav li a {
     text-decoration: none;
     transition: 0.3s;
     font-size: 30px;
-    font-family: 'Roboto Slab', serif;
-
+    font-family: Raleway, serif;
 }
 
-/* Change background color of links on hover */
-ul.topnav li a:hover {background-color: #93CACC;}
+ul.topnav li a:hover {
+	background-color: #93CACC;
+}
 
-/* Hide the list item that contains the link that should open and close the topnav on small screens */
-ul.topnav li.icon {display: none;}
-
-/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
-  
+ul.topnav li.icon {
+	display: none;
+}
 
 .aboutTitle {
-  text-align: center;
+	text-align: center;
 }
-
 
 .box, .box2, .box3, .box4, .box5, .box6 {
-  width: 200px;
-  height: 200px;
-  border: 1px yellow solid;
-  display: inline-block;
-  background-color: yellow;
-  
+	width: 200px;
+	height: 200px;
+	border: 1px yellow solid;
+	display: inline-block;
+	background-color: yellow;
 }
+
 body {
-  background-color: lightblue;
+	background-color: lightblue;
 }
+
 .header {
-  display: inline-block;
+	display: inline-block;
 }
 
 .hidden {
-  display: none;
+	display: none;
 }
 
 #display {
@@ -67,41 +64,41 @@ body {
 }
 
 .boxContainer {
-  display: inline-block;
-  position: relative;
-/*   width: 50%; */
+	display: inline-block;
+	position: relative;
 }
 
 .overlay {
- position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: orange;
-  overflow: hidden;
-  width: 100%;
-  height: 0;
-  transition: .5s ease;
-  opacity: .6;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: orange;
+	overflow: hidden;
+	width: 100%;
+	height: 0;
+	transition: .5s ease;
+	opacity: .6;
 }
 
 .boxContainer:hover .overlay {
-  height: 100%;
+	height: 100%;
 }
 
 .text {
-  white-space: nowrap; 
-  color: blue;
-  font-size: 20px;
-  position: absolute;
-  overflow: hidden;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+	white-space: nowrap; 
+	color: blue;
+	font-size: 20px;
+	position: absolute;
+	overflow: hidden;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
 }
+
 body{
-  text-align: center;
+	text-align: center;
 }
 
 form {
@@ -114,6 +111,7 @@ input {
 	font-size: 30px;
 	width: 100%;
 }
+
 .fields {
 	font-size: 50px;
 	color: white;
@@ -146,6 +144,7 @@ input {
 	font-size: 60px;
 	font-weight: bold;
 	color: #3E8076;
+	text-align: center;
 }
 
 .learning {
@@ -177,34 +176,47 @@ input {
 	background-color: #F7EC18;
 }
 
-@media only screen and (max-width:680px) {
-  ul.topnav li:not(:first-child) {display: none;}
-  ul.topnav li.icon {
-    float: right;
-    display: inline-block;
-  }
+.para {
+	color: black;
+	text-align: left;
+	font-family: Raleway;
+	margin-bottom: 2%;
 }
 
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+.seniorAbout {
+	padding: 12% 5% 10% 5%;
+}
+
 @media only screen and (max-width:680px) {
-  ul.topnav.responsive {position: relative;}
-  ul.topnav.responsive li.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  ul.topnav.responsive li {
-    float: none;
-    display: inline;
-  }
-  ul.topnav.responsive li a {
-    display: block;
-  }
+	ul.topnav li:not(:first-child) {
+		display: none;
+	}
+	ul.topnav li.icon {
+		float: right;
+		display: inline-block;
+	}
+}
+
+@media only screen and (max-width:680px) {
+	ul.topnav.responsive {
+		position: relative;
+	}
+	ul.topnav.responsive li.icon {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	ul.topnav.responsive li {
+		float: none;
+		display: inline;
+	}
+	ul.topnav.responsive li a {
+		display: block;
+	}
 }
 
 @media only screen and (max-width: 500px) {
-  body{
-    text-align: center; 
-  }
-  
+	body{
+		text-align: center; 
+	}
 }

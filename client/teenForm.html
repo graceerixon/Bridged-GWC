@@ -2,95 +2,103 @@
 	<form class = "teenForm">
 		<h3 class = "signIn"> Start your teen application </h3>
 		<div class = "row">
-		<div class = "col-md-6 col-sm-12">
-			<p> <div class = "fields"> FIRST NAME </div><input id = "firstName" type = "firstName" name = "firstName"> </p>
-		</div>
-		<div class = "col-md-6 col-sm-12">
-			<p> <div class = "fields"> LAST NAME </div><input id = "lastName" type = "lastName" name = "lastName"> </p>
-		</div>
+			<div class = "col-md-6 col-sm-12">
+				<p> <div class = "fields"> FIRST NAME </div><input id = "firstName" type = "firstName" name = "firstName"> </p>
+			</div>
+			<div class = "col-md-6 col-sm-12">
+				<p> <div class = "fields"> LAST NAME </div><input id = "lastName" type = "lastName" name = "lastName"> </p>
+			</div>
 		</div>
 		<div class = "row">
-		<div class = "col-md-6 col-sm-12">
-			<p> <div class = "fields"> PHONE NUMBER </div><input id = "phone" type = "phone" name = "phone"> </p>
+			<div class = "col-md-6 col-sm-12">
+				<p> <div class = "fields"> PHONE NUMBER </div><input id = "phone" type = "phone" name = "phone"> </p>
+			</div>
+			<div class = "col-md-6 col-sm-12">
+				<p> <div class = "fields"> EMAIL </div><input id = "email" type = "email" name = "email"></p>
+			</div>
 		</div>
-		<div class = "col-md-6 col-sm-12">
-			<p> <div class = "fields"> EMAIL </div><input id = "email" type = "email" name = "email"></p>
-		</div> </div>
+		
 		<div class = "header">
-	  <h1 class = "learning"> What would you like to teach? </h1><p class = "learnPara">Roll your mouse over a skill to learn more about it and click on the box to add it to your list!</p>
-	</div>
-	<br/>
+			<h1 class = "learning"> What would you like to teach? </h1>
+			<p class = "learnPara">Roll your mouse over a skill to learn more about it and click on the box to add it to your list!</p>
+		</div>
+		<br/>
 	
-	<center>
-	<div class = "boxes">
-	<div class="boxContainer">
-	  <img class = "box"
-	 src="one.png"/>
-	 <input id="firstBox" name="interests" type="checkbox" value="communication" class = "hidden"> 
-	   <div id = "firstBox" class="overlay">
-		<div class="text"><p>Communication</p></div>
-	</div>
-	  </div>
+		<center>
+		<div class = "boxes">
+			<div class="boxContainer">
+				<img class = "box" src="one.png"/>
+				<input id="firstBox" name="interests" type="checkbox" value="communication" class = "hidden"> 
+				<div id = "firstBox" class="overlay">
+					<div class="text">
+						<p>Communication</p>
+					</div>
+				</div>
+			</div>
 	  
-	 
-	<div class="boxContainer">
-	  <img class="box2" src ="two.png"/>
-	  <input id="secondBox" name="interests" type="checkbox" value="internet" class = "hidden"/>
-	<div id = "secondBox" class="overlay">
-	  <div class="text"><p>The Internet</p></div>
-	  </div>
-	</div>
-
+			<div class="boxContainer">
+				<img class="box2" src ="two.png"/>
+				<input id="secondBox" name="interests" type="checkbox" value="internet" class = "hidden"/>
+				<div id = "secondBox" class="overlay">
+					<div class="text">
+						<p>The Internet</p>
+					</div>
+				</div>
+			</div>
+ 
+			<div class="boxContainer">  
+				<img class="box3" src ="three.png"/>
+				<input id="thirdBox" name="interests" type="checkbox" value="mobileDevices" class = "hidden"/>
+				<div id = "thirdBox" class="overlay">
+					<div class="text">
+						<p>Mobile Devices</p>
+					</div>
+				</div>
+			</div>
+		<br>
 	  
-	  
-	<div class="boxContainer">  
-	  <img class="box3" src ="three.png"/>
-	  <input id="thirdBox" name="interests" type="checkbox" value="mobile" class = "hidden"/>
-	<div id = "thirdBox" class="overlay">
-		<div class="text"><p>Mobile Devices</p></div>
-	  </div>
-	</div>
-	<br>
-	  
-	 <div class="boxContainer">
-	  <img class="box4" src="four.png" />
-	  <input id="fourBox" name="interests" type="checkbox" value="social" class = "hidden"/>
-	<div id = "fourBox" class="overlay">
-		<div class="text"><p>Social Media</p></div>
-	  </div>
-	</div>
+			<div class="boxContainer">
+				<img class="box4" src="four.png" />
+				<input id="fourBox" name="interests" type="checkbox" value="socialMedia" class = "hidden"/>
+				<div id = "fourBox" class="overlay">
+					<div class="text">
+						<p>Social Media</p>
+					</div>
+				</div>
+			</div>
 		
-		
-	 <div class="boxContainer">
-	  <img class="box5" src="five.png" />
-	  <input id="fiveBox" name="interests" type="checkbox" value="computers" class = "hidden"/>
-	  <div id = "fiveBox" class="overlay">
-		<div class="text"><p>Computers</p></div>
-	  </div>
-	</div>
+			<div class="boxContainer">
+				<img class="box5" src="five.png" />
+				<input id="fiveBox" name="interests" type="checkbox" value="computers" class = "hidden"/>
+				<div id = "fiveBox" class="overlay">
+					<div class="text">
+						<p>Computers</p>
+					</div>
+				</div>
+			</div>
 		  
-		  
-	<div class="boxContainer">      
-	  <img class="box6" src="six.png"/>
-	  <input id="sixBox" name="interests" type="checkbox" value="word" class = "hidden"/>
-	<div id = "sixBox" class="overlay">
-		<div class="text"><p>Word Processing</p></div>
-	  </div>
-	</div>
-	</div>
-	</center>
+			<div class="boxContainer">      
+				<img class="box6" src="six.png"/>
+				<input id="sixBox" name="interests" type="checkbox" value="wordProcessing" class = "hidden"/>
+				<div id = "sixBox" class="overlay">
+					<div class="text">
+						<p>Word Processing</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		</center>
 	
 	
-	<p class = "learnPara">
-	Skills you have selected: <div id="display">
-	</div>
-	</p>
-
-	<p> <div class = "fields"> How old are you? </div> <input id = "age" type = "age" name = "age"> </p>
-	<p> <div class = "fields"> Where do you go to school? </div> <input id = "school" type = "school" name = "school"></p>
-	<p> <div class = "fields"> Why do you want to volunteer with us? </div> <input id = "answer" type = "answer" name = "answer"> </p>
+		<p class = "learnPara">
+			Skills you have selected: <div id="display"> </div>
+		</p>
+	
+		<p> <div class = "fields"> How old are you? </div> <input id = "age" type = "age" name = "age"> </p>
+		<p> <div class = "fields"> Where do you go to school? </div> <input id = "school" type = "school" name = "school"></p>
+		<p> <div class = "fields"> Why do you want to volunteer with us? </div> <input id = "answer" type = "answer" name = "answer"> </p>
 		
-	<p class = "center"> <input id = "registerButton" type = "submit" value = "REGISTER"> </p>
+		<p class = "center"> <input id = "registerButton" type = "submit" value = "REGISTER"> </p>
 		
 	</form>
 </template>

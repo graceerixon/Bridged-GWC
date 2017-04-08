@@ -5,32 +5,20 @@ import { FlowRouter } from 'meteor/kadira:flow-router';
 import './main.html';
 
 
-Template.seniorForm.events({
-  'submit form': function(event){
-    event.preventDefault();
-	var email = ($('[name=email]').val());
-	var seniorFirst = $('[name=seniorFirst]').val();
-	var seniorLast = $('[name=seniorLast]').val();
+Template.senior.events({
+	'submit form': function(event){
+		event.preventDefault();
+		var firstName = $('[name=firstName]').val();
+		var lastName = $('[name=lastName]').val();
+		interests = [];
+		list = ($('[name=interests]:checked'));
+		for (var i = 0; i < list.length; i++) {
+			interests.push(list[i].value);
+		}
 	
-	//var first = ($('[name=first]').val());
-	//var second = ($('[name=second]').val());
-	//var third = ($('[name=third]').val());
-	//var four = ($('[name=four]').val());
-	//var five = ($('[name=five]').val());
-	//var six = ($('[name=six]').val());
-	seniorInterests = [];
-	list2 = ($('[name=seniorInterests]:checked'));
-	for (var i = 0; i < list2.length; i++) {
-		seniorInterests.push(list2[i].value);
-	}
-	
-	
-	
-	var place = $('[name=place]').val();
-	var entrance = $('[name=entrance]').val();
-	console.log(event);
-	Meteor.call('insert seniorInfo', email, seniorFirst, seniorLast, seniorInterests, place, entrance);
-	FlowRouter.go('home');
+		console.log(event);
+		Meteor.call('insert seniorInfo', firstName, lastName, interests);
+		FlowRouter.go('home');
 	},
 	
 	'click #firstBox':function selectMeOne() {
@@ -42,19 +30,19 @@ Template.seniorForm.events({
 		}
   },
   
-  'click #secondBox': function selectMeTwo() {
+	'click #secondBox': function selectMeTwo() {
 		document.getElementById("secondBox").checked = !document.getElementById("secondBox").checked;
-		var e = document.getElementById("secondBox");
-		if (e.checked) {
-			var already2 = document.getElementById("display").innerText;
-			document.getElementById("display").innerText = already2 + "  The Internet,";
+		var f = document.getElementById("secondBox");
+		if (f.checked) {
+			var already = document.getElementById("display").innerText;
+			document.getElementById("display").innerText = already + "  The Internet,";
 		}
 	},
 	
 	'click #thirdBox': function selectMeThree() {
 		document.getElementById("thirdBox").checked = !document.getElementById("thirdBox").checked;
-		var e = document.getElementById("thirdBox");
-		if (e.checked) {
+		var g = document.getElementById("thirdBox");
+		if (g.checked) {
 			var already = document.getElementById("display").innerText;
 			document.getElementById("display").innerText = already + "   Mobile Devices,";
 		}
@@ -62,8 +50,8 @@ Template.seniorForm.events({
 	
 	'click #fourBox': function selectMeFour() {
 		document.getElementById("fourBox").checked = !document.getElementById("fourBox").checked;
-		var e = document.getElementById("fourBox");
-		if (e.checked) {
+		var h = document.getElementById("fourBox");
+		if (h.checked) {
 			var already = document.getElementById("display").innerText;
 			document.getElementById("display").innerText = already + "   Social Media,";
 		}
@@ -71,8 +59,8 @@ Template.seniorForm.events({
 	
 	'click #fiveBox': function selectMeFive() {
 		document.getElementById("fiveBox").checked = !document.getElementById("fiveBox").checked;
-		var e = document.getElementById("fiveBox");
-		if (e.checked) {
+		var i = document.getElementById("fiveBox");
+		if (i.checked) {
 			var already = document.getElementById("display").innerText;
 			document.getElementById("display").innerText = already + "   Computers,";
 		}
@@ -80,8 +68,8 @@ Template.seniorForm.events({
 	
 	'click #sixBox': function selectMeSix() {
 		document.getElementById("sixBox").checked = !document.getElementById("sixBox").checked;
-		var e = document.getElementById("sixBox");
-		if (e.checked) {
+		var j = document.getElementById("sixBox");
+		if (j.checked) {
 			var already = document.getElementById("display").innerText;
 			document.getElementById("display").innerText = already + "   Word Processing,";
 		}

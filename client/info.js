@@ -7,10 +7,8 @@ import { teenData } from '../lib/teenData.js';
 import './main.html';
 
 Template.info.onCreated(function() {
-	//this.state = new ReactiveDict();
 	Meteor.subscribe("teenData");
 });
-
 
 Template.info.helpers({
 	groups: function displayTeens() {

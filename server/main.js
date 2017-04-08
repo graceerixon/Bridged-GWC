@@ -1,33 +1,32 @@
 import { Meteor } from 'meteor/meteor';
 
 import { teenData } from '../lib/teenData.js';
-//import { seniorData } from '../lib/seniorData.js';
 import { contactUs } from '../lib/contactUs.js';
 import { admin } from '../lib/admin.js';
 
 Meteor.startup(() => {
-  if (Meteor.isServer) {
-	Meteor.publish('seniorData', function publication() {
-		return seniorData.find();
-	});
+	if (Meteor.isServer) {
+		Meteor.publish('seniorData', function publication() {
+			return seniorData.find();
+		});
 	}
 	
 	if (Meteor.isServer) {
-	Meteor.publish('teenData', function publication() {
-		return teenData.find();
-	});
+		Meteor.publish('teenData', function publication() {
+			return teenData.find();
+		});
 	}
 	
 	if (Meteor.isServer) {
-	Meteor.publish('contactUs', function publication() {
-		return contactUs.find();
-	});
+		Meteor.publish('contactUs', function publication() {
+			return contactUs.find();
+		});
 	}
 	
 	if (Meteor.isServer) {
-	Meteor.publish('admin', function publication() {
-		return admin.find();
-	});
+		Meteor.publish('admin', function publication() {
+			return admin.find();
+		});
 	}
 	
 	Meteor.methods({
@@ -78,5 +77,4 @@ Meteor.startup(() => {
 			});
 		}
 	});
-	
 });
