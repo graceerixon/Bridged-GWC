@@ -85,7 +85,7 @@
 }
 
 .boxes{
-	border: 1px yellow solid;
+	border: 1px gray solid;
 	display: inline-block;
 	background-color: #F7EC18;
 	font-family: 'Oswald', sans-serif;
@@ -280,5 +280,25 @@
 	}
 	.aboutHome h3{
 		font-size:30px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.verticalLine {
+		height: 2px;
+		width: 80%;
+		margin: 0 10% 0 10%;
+	}
+	.start1 {
+		margin: auto;
+		padding: 100px 0 100px 0;
+	}
+	.start2 {
+		margin: auto;
+		padding: 100px 0 100px 0;
+	}
+	.seniorsTeen {
+		margin: auto;
+		padding: 0;
 	}
 }
