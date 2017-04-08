@@ -41,9 +41,9 @@ ul.topnav li.icon {
 .box, .box2, .box3, .box4, .box5, .box6 {
 	width: 200px;
 	height: 200px;
-	border: 1px yellow solid;
+	border: 1px #F7EC18 solid;
 	display: inline-block;
-	background-color: yellow;
+	background-color: #F7EC18;
 }
 
 body {
@@ -186,6 +186,12 @@ input {
 
 .seniorAbout {
 	padding: 12% 5% 10% 5%;
+}
+
+.blurbs {
+	background-color:#F7EC18;
+	padding: 5% 5% 10% 5%;
+	margin-top: -6%;
 }
 
 @media only screen and (max-width:680px) {
